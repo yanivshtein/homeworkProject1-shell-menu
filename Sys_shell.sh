@@ -1,3 +1,4 @@
+#standard files
 cc Standard_shell.c -o Standard_shell
 cc Math_shell.c -o Math_shell
 cc Logic_shell.c -o Logic_shell
@@ -18,6 +19,7 @@ cc Find.c -o Find
 cc Replace.c -o Replace
 #common history
 cc History.c -o History
+#create commands folder if it dosent exist
 if [ ! -d "Commands" ]; then
 	mkdir "Commands"
 fi

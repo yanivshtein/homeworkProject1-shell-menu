@@ -5,12 +5,14 @@
 #include <string.h>
 
 int main(int argc, char* argv[]){
-	//check if the right amount of arguments are recieved
-	if(argc != 2){
-		printf("not the right amount of arguments");
-		exit(1);
-	}
-	printf("%X\n",atoi(argv[1]));
-	return 1;
-} 
-			
+    // Check if the right amount of arguments are received
+    if(argc != 2){
+        printf("not the right amount of arguments");
+        exit(1);
+    }
+
+    // Print the integer argument as a hexadecimal number
+    printf("%X\n", atoi(argv[1]));
+    
+    return 1;
+}

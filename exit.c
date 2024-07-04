@@ -5,16 +5,23 @@
 #include <string.h>
 
 int main(int argc, char* argv[]){
-	if(argc != 1){
-		printf("not the right amount of arguments");
-		exit(1);
-	}
-	if(fork() == 0){
-		execlp("rm","rm","-rf","Commands",NULL);
-		printf("error removing Commands directory");
-		exit(1);
-	}
-	printf("Goodbye...\n");
-	return 0;
-} 
-			
+    // Check if the right amount of arguments are received
+    if(argc != 1){
+        printf("not the right amount of arguments");
+        exit(1);
+    }
+
+    // Create a child process to execute the "rm" command
+    if(fork() == 0){
+        // Remove the "Commands" directory recursively and forcefully
+        execlp("rm", "rm", "-rf", "Commands", NULL);
+        // If execlp fails, print an error message
+        printf("error removing Commands directory");
+        exit(1);
+    }
+
+    // Print goodbye message
+    printf("Goodbye...\n");
+
+    return 0;
+}
