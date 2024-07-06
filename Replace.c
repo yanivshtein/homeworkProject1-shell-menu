@@ -16,7 +16,7 @@ int main(int argc, char* argv[]){
     int i, index = atoi(argv[3]) - 1;
 
     // Check if the replacement would go out of range
-    if(index + strlen(str) > strlen(sentence)){
+    if(index + 1 > strlen(sentence)){
         printf("the length of the string and index requested to be replaced are out of range\n");
         exit(1);
     }
@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
     }
 
     // Replace the characters in sentence with the new string
-    for(i = 0; i < strlen(str); i++){
+    for(i = 0; i < strlen(str) && temp[i] != '\0'; i++){
         temp[i] = str[i];
     }
 

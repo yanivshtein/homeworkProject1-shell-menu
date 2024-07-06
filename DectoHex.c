@@ -13,6 +13,6 @@ int main(int argc, char* argv[]){
 
     // Print the integer argument as a hexadecimal number
     printf("%X\n", atoi(argv[1]));
-    
+    //teacher said that can return a int of if the conversion was successful or not
     return 1;
 }

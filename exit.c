@@ -19,9 +19,9 @@ int main(int argc, char* argv[]){
         printf("error removing Commands directory");
         exit(1);
     }
-
+    wait(NULL);
     // Print goodbye message
-    printf("Goodbye...\n");
+    printf("GoodBye...\n");
 
     return 0;
 }
